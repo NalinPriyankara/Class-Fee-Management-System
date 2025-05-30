@@ -52,27 +52,4 @@ router.post('/create', async (req, res) => {
   }
 });
 
-// Get Fee Records by Student ID
-// router.get('/student/:sid', async (req, res) => {
-//   try {
-//     const { sid } = req.params;
-//     const feeRecords = await db.FeeRecord.findAll({
-//       where: { sid },
-//       order: [['monthYear', 'DESC']]
-//     });
-
-//     res.json({
-//       success: true,
-//       data: feeRecords
-//     });
-//   } catch (error) {
-//     console.error('Error fetching fee records:', error);
-//     res.status(500).json({
-//       success: false,
-//       message: 'Failed to fetch fee records',
-//       error: error.message
-//     });
-//   }
-// });
-
 module.exports = router;
