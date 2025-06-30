@@ -9,9 +9,9 @@ function Home() {
   const [loading, setLoading] = useState(false);
 
   const handleClick = () => {
-    setLoading(true); // Start loading
+    setLoading(true);
     setTimeout(() => {
-      navigate("/login"); // Navigate after delay
+      navigate("/login");
     }, 1000);
   };
 

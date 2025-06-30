@@ -11,7 +11,6 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  // Toast notification functions
   const showSuccess = (message) => {
     toast.success(message, {
       position: "top-center",
