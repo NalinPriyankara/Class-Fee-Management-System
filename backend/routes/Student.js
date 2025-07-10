@@ -1,25 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models'); // Adjust path as needed
+const db = require('../models');
 const Student = db.Student;
 
-// Add new student
 router.post('/add-student', async (req, res) => {
   try {
     const { name, sid, grade } = req.body;
     
-    // Validate input
     if (!name || !sid || !grade) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
-    // Check if student ID already exists
     const existingStudent = await Student.findOne({ where: { sid } });
     if (existingStudent) {
       return res.status(400).json({ error: 'Student ID already exists' });
     }
 
-    // Create new student
     const newStudent = await Student.create({
       sid,
       studentName: name,
@@ -33,11 +29,10 @@ router.post('/add-student', async (req, res) => {
   }
 });
 
-// Get all students
 router.get('/get-students', async (req, res) => {
   try {
     const students = await Student.findAll({
-      order: [['studentName', 'ASC']] // Optional: sort by name
+      order: [['studentName', 'ASC']]
     });
     res.json(students);
   } catch (error) {
@@ -46,7 +41,6 @@ router.get('/get-students', async (req, res) => {
   }
 });
 
-// Delete student
 router.delete('/delete-student/:sid', async (req, res) => {
   try {
     const { sid } = req.params;

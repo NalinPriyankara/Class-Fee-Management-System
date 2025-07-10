@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models'); // Assuming your models are properly set up
+const db = require('../models');
 
-// Create Fee Record
 router.post('/create', async (req, res) => {
   try {
     const { studentId, monthYear, totalAmount } = req.body;
 
-    // Validate required fields
     if (!studentId || !monthYear || !totalAmount) {
       return res.status(400).json({ 
         success: false,
@@ -15,7 +13,6 @@ router.post('/create', async (req, res) => {
       });
     }
 
-    // Check if fee record already exists for this student and month
     const existingRecord = await db.FeeRecord.findOne({
       where: {
         sid: studentId,

@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { Login } = require("../models"); // Adjust the path if needed
+const { Login } = require("../models");
 
-const SECRET_KEY = "your_secret_key"; // Store this securely in .env in production
+const SECRET_KEY = "your_secret_key";
 
 // User Registration Route
 router.post("/register", async (req, res) => {

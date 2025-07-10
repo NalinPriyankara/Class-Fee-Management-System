@@ -16,7 +16,6 @@ import SubjectAdd from './pages/SubjectAdd';
 function AppWrapper() {
   const location = useLocation();
   
-  // Hide the Header on /login, /home, and /dashboard pages
   const showHeader = !['/login', '/', '/dashboard'].includes(location.pathname);
 
   return (

@@ -123,7 +123,7 @@ const StudentAdd = () => {
               onChange={(e) => setGrade(e.target.value)}
               required
               className="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
-              placeholder="Enter student grade (e.g., A, B, 10th)"
+              placeholder="Enter student grade"
             />
           </div>
 

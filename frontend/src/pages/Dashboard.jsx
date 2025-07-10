@@ -35,19 +35,6 @@ const Dashboard = () => {
           </Dropdown>
         </div>
 
-        {/* Card 2 */}
-        <div className="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl p-6 shadow-xl flex flex-col items-center text-center transition transform hover:-translate-y-1 hover:shadow-2xl">
-          <h2 className="text-xl font-semibold text-white mb-4">Calculate Fee</h2>
-          <img
-            src={salary}
-            alt="Fee"
-            className="w-full h-40 object-cover rounded-lg mb-4"
-          />
-          <Button className="w-full bg-white text-black font-semibold hover:bg-blue-100 transition" onClick={() => navigate("/fees")}>
-            Calculate Fee
-          </Button>
-        </div>
-
         {/* Card 3 */}
         <div className="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl p-6 shadow-xl flex flex-col items-center text-center transition transform hover:-translate-y-1 hover:shadow-2xl">
           <h2 className="text-xl font-semibold text-white mb-4">Manage Subjects</h2>
@@ -70,6 +57,20 @@ const Dashboard = () => {
             </Dropdown.Menu>
           </Dropdown>
         </div>
+
+        {/* Card 2 */}
+        <div className="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl p-6 shadow-xl flex flex-col items-center text-center transition transform hover:-translate-y-1 hover:shadow-2xl">
+          <h2 className="text-xl font-semibold text-white mb-4">Calculate Fee</h2>
+          <img
+            src={salary}
+            alt="Fee"
+            className="w-full h-40 object-cover rounded-lg mb-4"
+          />
+          <Button className="w-full bg-white text-black font-semibold hover:bg-blue-100 transition" onClick={() => navigate("/fees")}>
+            Calculate Fee
+          </Button>
+        </div>
+
       </div>
     </div>
   );

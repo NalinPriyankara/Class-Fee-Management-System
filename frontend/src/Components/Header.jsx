@@ -4,7 +4,7 @@ import { FiLogOut } from "react-icons/fi";
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [selectedMenu, setSelectedMenu] = useState(null); // <- Track clicked menu
+  const [selectedMenu, setSelectedMenu] = useState(null);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const navRef = useRef(null);
@@ -13,7 +13,7 @@ const Header = () => {
   const toggleDropdown = (menu) => {
     const isSameMenu = openDropdown === menu;
     setOpenDropdown(isSameMenu ? null : menu);
-    setSelectedMenu(isSameMenu ? null : menu); // <- Highlight clicked menu
+    setSelectedMenu(isSameMenu ? null : menu);
   };
 
   const closeDropdown = () => {
@@ -31,7 +31,7 @@ const Header = () => {
     setTimeout(() => {
       setShowSuccess(false);
       localStorage.removeItem("accessToken");
-      navigate("/"); // Navigate to home page
+      navigate("/");
     }, 0);
   };
 

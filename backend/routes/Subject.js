@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require('../models');
 const Subject = db.Subject;
 
-// Add new subject
 router.post('/add-subject', async (req, res) => {
   try {
     const { subjectCode, subjectName, subjectFee } = req.body;
