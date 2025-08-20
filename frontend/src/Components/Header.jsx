@@ -103,16 +103,7 @@ const Header = () => {
               )}
             </li>
 
-            {/* Calculate class fee */}
-            <li className="relative">
-              <Link
-                to="/fees"
-                className={menuStyle("work")}
-                style={{ textDecoration: "none" }}
-              >
-                Calculate Fee <span className="ml-1 text-xs"></span>
-              </Link>
-            </li>
+            
             {/* Manage Subjects */}
             <li className="relative">
               <div
@@ -143,6 +134,17 @@ const Header = () => {
                   </li>
                 </ul>
               )}
+            </li>
+
+            {/* Calculate class fee */}
+            <li className="relative">
+              <Link
+                to="/fees"
+                className={menuStyle("work")}
+                style={{ textDecoration: "none" }}
+              >
+                Calculate Fee <span className="ml-1 text-xs"></span>
+              </Link>
             </li>
 
             {/* Logout Button */}

@@ -16,7 +16,7 @@ import SubjectAdd from './pages/SubjectAdd';
 function AppWrapper() {
   const location = useLocation();
   
-  const showHeader = !['/login', '/', '/dashboard'].includes(location.pathname);
+  const showHeader = !['/login', '/', '/dashboard', '/userReg'].includes(location.pathname);
 
   return (
     <>

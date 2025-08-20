@@ -57,7 +57,6 @@ const StudentAdd = () => {
       setSid("");
       setGrade("");
       showSuccess("Student Added Successfully!");
-     // setTimeout(() => navigate("/studentview"), 1500);
     } catch (error) {
       console.error("Error adding student:", error);
       if (error.response && error.response.data.error) {
